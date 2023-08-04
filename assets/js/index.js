@@ -16,8 +16,8 @@ const typeing = function () {
     }
     )
 }
-
 typeing()
+
 
 $("#menu-hum").on(
     "click",
@@ -37,8 +37,8 @@ $("#menu-hum").on(
     }
 )
 
-const media = matchMedia("(max-width: 760px)")
 
+const media = matchMedia("(max-width: 760px)")
 const isCurrectMedia = () => {
     if (media.matches) {
         $(".sidebar").addClass("sidebarChangeWidth")
