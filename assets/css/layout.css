@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "vazir";
+    src: url('../fonts/Vazir.ttf');
+}
+
+* {
+    font-family: 'vazir';
+}
+
+header {
+    background-color: rgb(255, 112, 162);
+    border-bottom: 1px solid black;
+    box-shadow: 2px 2px 20px rgba(122, 85, 98, 0.3);
+    height: 80px;
+}
+
+.sidebar {
+    background-color: darkblue;
+    width: 250px;
+    position: sticky;
+    padding-bottom: 10px;
+    height: 100%;
+    transition: all 200ms linear;
+    overflow-x: hidden;
+}
+
+.sidebarChangeWidth{
+    width: 0px;
+}
+
+.userInfo {
+    text-align: center;
+}
+
+.block {
+    margin-top: 80px;
+    height: 100vh;
+}
+
+.sideBarLink {
+    color: white;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    background-color: rgba(245, 150, 245, 0.1);
+    border: 1px black solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.sideBarLink+.sideBarLink {
+    margin-top: 20px;
+}
