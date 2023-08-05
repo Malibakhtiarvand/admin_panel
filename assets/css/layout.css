@@ -59,8 +59,7 @@ header {
 .products {
     display: grid;
     grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
-    grid-column-gap: 10%;
-    grid-gap: 40px;
+    grid-gap: 10px;
 }
 
 #pages {
@@ -99,4 +98,16 @@ header {
     display: block;
     height: fit-content;
     padding: 5px;
+}
+
+@media (max-width:690px) {
+    .products {
+        grid-template-columns: calc(100%/2) calc(100%/2);
+    }
+}
+
+@media (max-width:450px) {
+    .products {
+        grid-template-columns: calc(100%);
+    }
 }

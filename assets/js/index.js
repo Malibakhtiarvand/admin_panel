@@ -25,10 +25,14 @@ $("#menu-hum").on(
         const classNames = document.querySelector(".sidebar").classList
 
         classNames.toggle("sidebarChangeWidth")
-        if (!classNames.contains("sidebarChangeWidth") && window.innerWidth <= 720) {
-            $("main").css("display", "none")
+        if (!classNames.contains("sidebarChangeWidth")) {
+            if (window.innerWidth <= 720) {
+                $("main").css("display", "none")
+            } else {
+                $("main").css("width", "")
+            }
         } else {
-            $("main").css({display: "",width: "100%"})
+            $("main").css({ display: "", width: "100%" })
         }
     }
 )
@@ -40,6 +44,7 @@ const isCurrectMedia = () => {
         $(".sidebar").addClass("sidebarChangeWidth")
     } else {
         $(".sidebar").removeClass("sidebarChangeWidth")
+        $("main").css({ display: "", width: "100%" })
     }
 }
 
