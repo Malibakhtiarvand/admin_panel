@@ -22,18 +22,14 @@ typeing()
 $("#menu-hum").on(
     "click",
     () => {
-        const classNames = document.querySelector(".sidebar")
-            .classList
+        const classNames = document.querySelector(".sidebar").classList
 
         classNames.toggle("sidebarChangeWidth")
-        if (classNames.contains("sidebarChangeWidth")) {
-            $("#typing").append('<p id="typed"></p>')
-            typeing()
+        if (!classNames.contains("sidebarChangeWidth") && window.innerWidth <= 720) {
+            $("main").css("display", "none")
         } else {
-            $("#typed").remove()
-            $(".typed-cursor").remove()
+            $("main").css({display: "",width: "100%"})
         }
-
     }
 )
 
@@ -44,11 +40,6 @@ const isCurrectMedia = () => {
         $(".sidebar").addClass("sidebarChangeWidth")
     } else {
         $(".sidebar").removeClass("sidebarChangeWidth")
-        $(".typed-cursor").remove()
-        
-        $("#typed").remove()
-        $("#typing").append('<p id="typed"></p>')
-        typeing()
     }
 }
 

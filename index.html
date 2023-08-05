@@ -26,7 +26,14 @@
             <hr style="color: white;" />
 
             <nav class="sideBarLinks">
-                <a class="sideBarLink" href="">کاربر ها</a>
+                <div id="usersSiteToggle">
+                    <p class="sideBarLink">مشترکین سایت</p>
+
+                    <div id="usersSite">
+                        <a href="">کاربر ها</a>
+                        <a href="">ادمین ها</a>
+                    </div>
+                </div>
                 <a class="sideBarLink" href="">محصولات ما</a>
                 <a class="sideBarLink" href="">آمار</a>
                 <a class="sideBarLink" href="">اطلاعات شخصی</a>
@@ -40,16 +47,56 @@
 
         </aside>
 
-        <main>
-            <div id="typing">
-                <p id="typed"></p>
-            </div>
+        <main id="pages">
+            <section id="Home">
+                <div id="typing">
+                    <p id="typed"></p>
+                </div>
+            </section>
+
+            <section id="our-products">
+                <div class="products">
+                    <div class="product">
+                        <img src="./assets/img/jqueryProducts.png" />
+                        <div>
+                            <p>نام: آموزش jquery</p>
+                            <p>تعداد فروش:20</p>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="./assets/img/jqueryProducts.png" />
+                        <div>
+                            <p>نام: آموزش jquery</p>
+                            <p>تعداد فروش:20</p>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="./assets/img/jqueryProducts.png" />
+                        <div>
+                            <p>نام: آموزش jquery</p>
+                            <p>تعداد فروش:20</p>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="./assets/img/jqueryProducts.png" />
+                        <div>
+                            <p>نام: آموزش jquery</p>
+                            <p>تعداد فروش:20</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
     </div>
 
     <script src="./assets/vendor/bootstrap-5.3.1-dist/js/bootstrap.js"></script>
     <script src="./assets/vendor/jquery/jquery-3.7.0.js"></script>
     <script src="./assets/vendor/typed/typed.umd.js"></script>
+    <script src="./assets/vendor/fullPage.js-master/dist/fullpage.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 
