@@ -29,7 +29,7 @@
                 <div id="usersSiteToggle">
                     <p class="sideBarLink">مشترکین سایت</p>
 
-                    <div id="usersSite">
+                    <div id="usersSite" style="display: none;">
                         <a href="">کاربر ها</a>
                         <a href="">ادمین ها</a>
                     </div>
@@ -49,6 +49,8 @@
 
         <main id="pages">
             <section id="Home">
+                <h1>خانه</h1>
+
                 <div id="typing">
                     <p id="typed"></p>
                 </div>
@@ -91,6 +93,80 @@
                 </div>
             </section>
 
+            <section id="charts">
+                <h1>نمودار ها</h1>
+
+                <div>
+                    <div>
+                        <canvas id="Bar_Charts"></canvas>
+                        <i class="fa fa-code bg-info" id="show_Bar_Charts_Code" style="padding: 5px;"></i>
+
+                        <div id="Bar_Charts_Code" style="display: none;">
+                            <h3>JS</h3>
+
+                            <code>
+                                const xValues = ["Italy", "France", "Spain", "USA", "Argentina"]; <br />
+                                const yValues = [55, 49, 44, 24, 15]; <br />
+                                const barColors = ["red", "green","blue","orange","brown"]; <br />
+
+                                new Chart("myChart", { <br />
+                                type: "bar", <br />
+                                data: { <br />
+                                    labels: xValues, <br />
+                                    datasets: [{ <br />
+                                    backgroundColor: barColors, <br />
+                                    data: yValues <br />
+                                    }] <br />
+                                }, <br />
+                                options: { <br />
+                                    legend: {display: false}, <br />
+                                    title: { <br />
+                                    display: true, <br />
+                                    text: "World Wine Production 2018" <br />
+                                    } <br />
+                                } <br />
+                                }); <br />
+                            </code>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <canvas id="line_charts"></canvas>
+
+                        <i class="fa fa-code bg-info" id="show_line_Charts_Code" style="padding: 5px;"></i>
+
+                        <div style="display: none;" id="line_Charts_Code">
+                            <h2>JS</h2>
+
+                            <code>
+                                const xValues = [50,60,70,80,90,100,110,120,130,140,150]; <br />
+                                const yValues = [7,8,8,9,9,9,10,11,14,14,15]; <br />
+
+                                new Chart("myChart", { <br />
+                                type: "line", <br />
+                                data: { <br />
+                                    labels: xValues, <br />
+                                    datasets: [{ <br />
+                                    fill: false, <br />
+                                    lineTension: 0, <br />
+                                    backgroundColor: "rgba(0,0,255,1.0)", <br />
+                                    borderColor: "rgba(0,0,255,0.1)", <br />
+                                    data: yValues <br />
+                                    }] <br />
+                                }, <br />
+                                options: {
+                                    legend: {display: false}, <br />
+                                    scales: { <br />
+                                    yAxes: [{ticks: {min: 6, max:16}}], <br />
+                                    } <br />
+                                } <br />
+                                }); <br />
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
     </div>
 
@@ -99,6 +175,8 @@
     <script src="./assets/vendor/typed/typed.umd.js"></script>
     <script src="./assets/vendor/fullPage.js-master/dist/fullpage.js"></script>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/vendor/chartJs/Chart.js"></script>
+    <script src="./assets/js/chart.js"></script>
 </body>
 
 </html>

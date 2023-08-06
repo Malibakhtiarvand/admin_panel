@@ -89,17 +89,6 @@ header {
     width: 80%;
 }
 
-#usersSite {
-    transition: all 1s ease-in-out;
-    display: none;
-}
-
-#usersSiteToggle:hover #usersSite {
-    display: block;
-    height: fit-content;
-    padding: 5px;
-}
-
 @media (max-width:690px) {
     .products {
         grid-template-columns: calc(100%/2) calc(100%/2);
@@ -110,4 +99,10 @@ header {
     .products {
         grid-template-columns: calc(100%);
     }
+}
+
+code {
+    text-align: left;
+    direction: ltr;
+    float: left;
 }

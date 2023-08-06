@@ -49,3 +49,10 @@ const isCurrectMedia = () => {
 }
 
 media.addEventListener("change", isCurrectMedia)
+
+$(".sideBarLink").on(
+    "click",
+    () => {
+        $("#usersSite").slideToggle()
+    }
+)
