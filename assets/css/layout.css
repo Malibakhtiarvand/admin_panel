@@ -105,4 +105,9 @@ code {
     text-align: left;
     direction: ltr;
     float: left;
+    width: 100%;
+}
+
+.obligation{
+    margin-right: 20px;
 }
